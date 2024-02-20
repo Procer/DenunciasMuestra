@@ -1,0 +1,60 @@
+ZSGCanalDenuncias
+
+-SIEMPRE ES ANÓNIMA.
+
+-CUANDO SE CARGA UNA DENUNCIA EL SISTEMA GENERA UN USUARIO Y CONTRASEÑA, QUE SERÁ ENVIADA POR EMAIL A QUIEN LA CREÓ.
+
+-AVISA A ALGUIEN DE LA EMPRESA QUE SE CREÓ UNA NUEVA DENUNCIA, DEPENDIENDO DE QUÉ SECTOR ESTÁ INVOLUCRADO.
+
+
+
+RELACION CON [empresa]
+-empleado - si es empleado preguntar por el sector de la empresa
+-proveedor
+-cliente
+-otro
+
+TEMA DENUNCIA
+-acoso laboral
+-acoso sexual
+-corrupcion
+-discriminacion
+-maltrato
+
+TEMA RECLAMO
+
+NOMBRE Y APELLIDO DEL ACUSADO
+
+DETALLE ACONTENIDO (fecha, hora, lugar, descripción del incidente, testigos - si hay - y cualquier otro detalle )
+
+ADJUNTAR ARCHIVOS (PDF, IMAGENES, VIDEO, ETC)
+
+
+TABLA DENUNCIAS
+IdDenuncia
+FechaHoraCreada
+RelacionEmpresa
+TemaDenuncia
+NombreApellidoAcusado
+DetalleAcontecido
+Estado (creado - en curso - resulto)
+Resolución
+IdUsuarioCreado
+
+TABLA USUARIOS
+IdUsuario
+Usuario
+Pass
+
+HISTORIAL VISTAS
+IdHistorialVistas
+IdUsuario
+IdDenuncia
+FechaHoraVistas
+
+HISTORIAL DENUNCIAS
+IdHistorialDenuncias
+IdDenuncia
+IdUsuario
+ModificacionDenuncia
+
